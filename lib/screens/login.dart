@@ -1,4 +1,5 @@
 import 'package:delivery/model/layout.dart';
+import 'package:delivery/screens/order_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -25,7 +26,7 @@ class LoginPage extends StatelessWidget {
                   Text(
                     'Casão Lanches',
                     style: TextStyle(
-                      fontSize: 30,
+                      fontSize: 32,
                       fontStyle: FontStyle.italic,
                       color: Color(0xFF7540EE),
                       fontWeight: FontWeight.bold,
@@ -44,7 +45,7 @@ class LoginPage extends StatelessWidget {
                     'Bem-vindo mlkote!',
                     style: TextStyle(
                       color: Color(0xFF25265E),
-                      fontSize: 24,
+                      fontSize: 28,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
@@ -99,7 +100,12 @@ class LoginPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   FlatButton(
-                    onPressed: () => null,
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => OrderScreen()),
+                      );
+                    },
                     child: Text(
                       'Entrar',
                       style: TextStyle(
