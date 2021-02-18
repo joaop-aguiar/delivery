@@ -11,7 +11,7 @@ class OrderScreen extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.redAccent,
       ),
-      drawer: Drawer(        
+      endDrawer: Drawer(        
         // Add a ListView to the drawer. This ensures the user can scroll
         // through the options in the drawer if there isn't enough vertical
         // space to fit everything.
