@@ -1,4 +1,3 @@
-import 'package:delivery/screens/login.dart';
 import 'package:delivery/screens/order_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';

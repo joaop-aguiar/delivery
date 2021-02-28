@@ -7,131 +7,295 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 class OrderScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    var scaffold = Scaffold(
       appBar: AppBar(
-        actions: [
-          Icon(
-            FontAwesomeIcons.hamburger,
-            color: Colors.deepOrange,
-            size: 20,
-          ),
-          IconButton(
-            icon: Icon(
-              Icons.settings,
-              color: Colors.white,
-              
+        leading: Icon(
+          FontAwesomeIcons.hamburger,
+          color: Colors.deepOrange,
+          size: 25,
+        ),
+        title: Center(
+          child: Text(
+            'Casão Lanches',
+            style: TextStyle(
+              fontStyle: FontStyle.italic,
+              fontWeight: FontWeight.bold,
+              fontSize: 25,
+              color: Colors.yellowAccent,
             ),
-            onPressed: (){
-              
-
-              //ENVIAR PARA A PÁGINA DE CONFIGURAÇÕES
-              //ABRIR AS CONFIGURAÇÕES              
-
-            },
-          )
-          
-        ],
-
-        title: Text(
-          'Casão Lanches',
-          style: TextStyle(
-            fontStyle: FontStyle.italic,
-            fontWeight: FontWeight.bold,
-            fontSize: 25,
-            color: Colors.yellowAccent,
           ),
         ),
-        
-        centerTitle: true,
+        actions: [
+          IconButton(
+            icon: Icon(
+              Icons.dehaze_rounded,
+              color: Colors.white,
+              size: 30,
+            ),
+            onPressed: () => {
+
+
+
+              
+            },
+          ),
+        ],
         backgroundColor: Colors.black54,
       ),
-      
-      
-
-
-
-
-
-
-
-
-
-
-
-
-
-      /*endDrawer: Drawer(      
-          
-        // Add a ListView to the drawer. This ensures the user can scroll
-        // through the options in the drawer if there isn't enough vertical
-        // space to fit everything.
-        child: SafeArea(
-          top: true,
-          bottom: true,
-          right: false,
-          left: false,
-          child: ListView(
-            // Important: Remove any padding from the ListView.
-            children: [
-              SizedBox(
-                width: 80,
-                height: 80,
-                child: DrawerHeader(
-                  child: Column(
-                    children: [
-                      Icon(
-                      FontAwesomeIcons.hamburger,
-                      color: Colors.black,
-                      size: 20,
-                    ),
-                      Center(
-                        child: Text(
-                        'Escolha sua categoria',
-                        style: TextStyle(
-                          fontStyle: FontStyle.italic,
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                        ),
-
-                        )
-                      ),
-                    ],
+      body: GridView.count(
+        primary: false,
+        padding: const EdgeInsets.all(1),
+        crossAxisSpacing: 5,
+        mainAxisSpacing: 5,
+        crossAxisCount: 2,
+        children: [
+          Container(
+            child: Opacity(
+              opacity: 0.89,
+              child: Container(
+                decoration: new BoxDecoration(
+                  image: new DecorationImage(
+                    image: new NetworkImage(
+                        'https://i.pinimg.com/564x/a0/4b/56/a04b5699d049e0574c680560fa226af5.jpg'),
+                    fit: BoxFit.fill,
                   ),
-                  decoration: BoxDecoration(
-                    color: Colors.orange,
+                ),
+                padding: const EdgeInsets.all(10),
+                /*child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Center(
+                      child: const Text(
+                        'HAMBÚRGUER AUSTRÁLIANO',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 22,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),*/
+              ),
+            ),
+            
+            
+          ),
+          
+          Opacity(
+            opacity: 0.89,
+            child: Container(
+              decoration: new BoxDecoration(
+                image: new DecorationImage(
+                  image: new NetworkImage(
+                      'https://i.pinimg.com/564x/a0/4b/56/a04b5699d049e0574c680560fa226af5.jpg'),
+                  fit: BoxFit.fill,
+                ),
+              ),
+              padding: const EdgeInsets.all(10),
+              child: Center(
+                child: const Text(
+                  'HAMBÚRGUER AUSTRÁLIANO',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20,
+                    fontStyle: FontStyle.italic,
                   ),
                 ),
               ),
-              ListTile(
-                title: Text('Item 1'),
-                onTap: () {
-                  // Update the state of the app
-                  // ...
-                  // Then close the drawer
-                  Navigator.pop(context);
-                },
+            ),
+          ),
+          Opacity(
+            opacity: 0.89,
+            child: Container(
+              decoration: new BoxDecoration(
+                image: new DecorationImage(
+                  image: new NetworkImage(
+                      'https://i.pinimg.com/564x/a0/4b/56/a04b5699d049e0574c680560fa226af5.jpg'),
+                  fit: BoxFit.fill,
+                ),
               ),
-              ListTile(
-                title: Text('Item 2'),
-                onTap: () {
-                  // Update the state of the app
-                  // ...
-                  // Then close the drawer
-                  Navigator.pop(context);
-                },
+              padding: const EdgeInsets.all(10),
+              child: Center(
+                child: const Text(
+                  'HAMBÚRGUER AUSTRÁLIANO',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20,
+                  ),
+                ),
               ),
-            ],
+            ),
+          ),
+          Opacity(
+            opacity: 0.89,
+            child: Container(
+              decoration: new BoxDecoration(
+                image: new DecorationImage(
+                  image: new NetworkImage(
+                      'https://i.pinimg.com/564x/a0/4b/56/a04b5699d049e0574c680560fa226af5.jpg'),
+                  fit: BoxFit.fill,
+                ),
+              ),
+              padding: const EdgeInsets.all(10),
+              child: Center(
+                child: const Text(
+                  'HAMBÚRGUER AUSTRÁLIANO',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20,
+                  ),
+                ),
+              ),
+            ),
+          ),
+          Opacity(
+            opacity: 0.89,
+            child: Container(
+              decoration: new BoxDecoration(
+                image: new DecorationImage(
+                  image: new NetworkImage(
+                      'https://i.pinimg.com/564x/a0/4b/56/a04b5699d049e0574c680560fa226af5.jpg'),
+                  fit: BoxFit.fill,
+                ),
+              ),
+              padding: const EdgeInsets.all(10),
+              child: Center(
+                child: const Text(
+                  'HAMBÚRGUER AUSTRÁLIANO',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20,
+                  ),
+                ),
+              ),
+            ),
+          ),
+          Opacity(
+            opacity: 0.89,
+            child: Container(
+              decoration: new BoxDecoration(
+                image: new DecorationImage(
+                  image: new NetworkImage(
+                      'https://i.pinimg.com/564x/a0/4b/56/a04b5699d049e0574c680560fa226af5.jpg'),
+                  fit: BoxFit.fill,
+                ),
+              ),
+              padding: const EdgeInsets.all(10),
+              child: Center(
+                child: const Text(
+                  'HAMBÚRGUER AUSTRÁLIANO',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20,
+                  ),
+                ),
+              ),
+            ),
+          ),
+          Opacity(
+            opacity: 0.89,
+            child: Container(
+              decoration: new BoxDecoration(
+                image: new DecorationImage(
+                  image: new NetworkImage(
+                      'https://i.pinimg.com/564x/a0/4b/56/a04b5699d049e0574c680560fa226af5.jpg'),
+                  fit: BoxFit.fill,
+                ),
+              ),
+              padding: const EdgeInsets.all(10),
+              child: Center(
+                child: const Text(
+                  'HAMBÚRGUER AUSTRÁLIANO',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20,
+                  ),
+                ),
+              ),
+            ),
+          ),
+          Opacity(
+            opacity: 0.89,
+            child: Container(
+              decoration: new BoxDecoration(
+                image: new DecorationImage(
+                  image: new NetworkImage(
+                      'https://i.pinimg.com/564x/a0/4b/56/a04b5699d049e0574c680560fa226af5.jpg'),
+                  fit: BoxFit.fill,
+                ),
+              ),
+              padding: const EdgeInsets.all(10),
+              child: Center(
+                child: const Text(
+                  'HAMBÚRGUER AUSTRÁLIANO',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20,
+                  ),
+                ),
+              ),
+            ),
+          ),
+          Opacity(
+            opacity: 0.89,
+            child: Container(
+              decoration: new BoxDecoration(
+                image: new DecorationImage(
+                  image: new NetworkImage(
+                      'https://i.pinimg.com/564x/a0/4b/56/a04b5699d049e0574c680560fa226af5.jpg'),
+                  fit: BoxFit.fill,
+                ),
+              ),
+              padding: const EdgeInsets.all(10),
+              child: Center(
+                child: const Text(
+                  'HAMBÚRGUER AUSTRÁLIANO',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20,
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+    return scaffold;
+  }
+}
+
+/*Container(
+        height: 1000,
+        width: 500,
+        child: SizedBox.expand(
+          child: DraggableScrollableSheet(
+            initialChildSize: 0.6,
+            maxChildSize: 1,
+            builder: (BuildContext context, ScrollController scrollcontroller) {
+              return Container(
+                color: Colors.cyan,
+                child: ListView.builder(
+                  controller: scrollcontroller,
+                  itemCount: 25,
+                  itemBuilder: (BuildContext context, int index) {
+                    return ListTile(
+                      title: Text('Item $index'),
+                    );
+                  },
+                ),
+              );
+            },
           ),
         ),
       ),*/
-
-
-
-
-
-
-
-
-    );
-  }
-}
